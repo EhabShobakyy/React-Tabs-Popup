@@ -1,0 +1,21 @@
+.disclosure-header {
+    font-size: 25px;
+   
+}
+.disclosure {
+    background-color:  #dddddd54;
+}
+.disclosure-container {
+    padding: 10px 0px;
+}
+.disclosure-title {
+    font-size: 14px;
+}
+.disclosure-body {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.disclosure-btn {
+    color: var(--second-color);
+    border: unset;
+}

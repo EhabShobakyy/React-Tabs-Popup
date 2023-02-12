@@ -1,0 +1,30 @@
+.calendar-header {
+    font-size: 25px;
+}
+.year-info {
+    font-size: 18px;
+    color: var(--second-color);
+}
+.year-day{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--first-color);   
+}
+.calendar-desc {
+    font-size: 14px;
+    margin-top: 10px ;
+}
+.calendar-footer {
+    margin-bottom: 12px
+}
+.calendar-footer p {
+    font-size: 12px;
+    color: var(--second-color);
+}
+.details-btn {
+    background-color:  var(--first-color);
+    border: unset;
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-size: 12px;
+}
