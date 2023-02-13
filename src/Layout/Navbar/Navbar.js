@@ -7,7 +7,7 @@ function Navbar() {
         <NavLink className="nav-link" to="/" end>
           Overview Page
         </NavLink>
-        <NavLink className="nav-link" to="/Disclosures">
+        <NavLink className="nav-link" to="/DisclosuresPage">
           Disclosure Page
         </NavLink>
       </div>

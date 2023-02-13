@@ -1,6 +1,7 @@
 import "./App.css";
 import Disclosures from "./Component/Disclosures/Disclosures";
-import DisclosureComp from "../src/Component/OverviewPage/Disclosures/Disclosure";
+import DisclosureComp from "./Component/OverviewPage/DisclosuresComp/Disclosure";
+import OverviewPage from "../src/Component/OverviewPage/Overview";
 import Navbar from "../src/Layout/Navbar/Navbar";
 
 // Import Routes
@@ -13,11 +14,11 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<DisclosureComp />} />
-          <Route path="/Disclosures" exact element={<Disclosures />} />
+          <Route path="/" element={<OverviewPage />} />
+          <Route path="/DisclosuresPage" exact element={<Disclosures />} />
 
           <Route
-            path="/Disclosures/:individualID"
+            path="/DisclosuresPage/:individualID"
             exact
             element={<Disclosures />}
           />

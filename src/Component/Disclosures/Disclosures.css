@@ -1,13 +1,16 @@
-.main-tabs .react-tabs__tab {
+.disclosure-page {
+    background-color: #dddddd54;
+}
+.tabsList {
     background-color: #fff;
     box-sizing: border-box;
     color: #707070;
     font-weight: 600;
     margin: 0!important;
+    cursor: pointer;
     text-align: center;
-    width: 33.3%;
 }
-.main-tabs {
+.tabsList {
     background-color: #fff;
     border: 1px solid #ffe738;
     border-radius: 7px;
@@ -16,6 +19,8 @@
     margin-bottom: 50px!important;
     margin-left: 0!important;
     width: 75%!important;
+    display: flex;
+    justify-content: space-around;
 }
 .main-tabs .react-tabs__tab--selected{
     border: none!important;
@@ -29,4 +34,8 @@
 }
 .popup-icon {
     cursor: pointer;
+}
+
+.active-tab {
+    background-color: #ffe738;
 }

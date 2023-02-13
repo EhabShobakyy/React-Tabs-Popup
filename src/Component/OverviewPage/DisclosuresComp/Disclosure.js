@@ -70,7 +70,7 @@ const DisclosureComp = () => {
           );
         })}
 
-        <Link to={`/Disclosures/${"disclosures"}`}>MORE</Link>
+        <Link to={`/DisclosuresPage/${"disclosures"}`}>MORE</Link>
       </div>
 
       {/* <Modal id={"disclosureModal"}>

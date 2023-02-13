@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AccessRefreshTokens from "../../../RefreshToken/AccessRefreshTokens";
 
+import { Link } from "react-router-dom";
 // Style
 import "./Calendar.css";
 // Format Date
@@ -38,17 +39,15 @@ const Calendar = () => {
     // console.log(detailsModal);
   };
 
-  const changeLanguage = () =>
-    i18n.language.charAt(0).toUpperCase() + i18n.language.charAt(1);
+  // const changeLanguage = () =>
+  //   i18n.language.charAt(0).toUpperCase() + i18n.language.charAt(1);
 
   return (
-    <>
-      <div className="calendar container-md py-5">
+    <div className="calendar-comp">
+      <div className=" container-md py-5">
         <div className="row">
           <div className="main-title">
-            <h2 className="calendar-header">
-              {t("OverviewPage.Calendar.calendar")}
-            </h2>
+            <h2 className="calendar-header">Calendar</h2>
           </div>
           {Calendar?.slice(0, 2).map((item, idx) => {
             return (
@@ -66,9 +65,9 @@ const Calendar = () => {
                 </div>
 
                 <div className="calendar-body col-10">
-                  <p>{item?.[`typeName${changeLanguage()}`]}</p>
+                  <p>{item?.[`typeNameEn`]}</p>
                   <p className="calendar-desc">
-                    {item?.[`description${changeLanguage()}`]
+                    {item?.[`descriptionEn`]
                       .replace(/(<([^>]+)>)/gi, "")
                       .substr(0, 245)}
                     ...
@@ -84,13 +83,14 @@ const Calendar = () => {
                       onClick={() => changeContent(item)}
                       className="details-btn"
                     >
-                      {t("Details.details")}
+                      Details
                     </button>
                   </div>
                 </div>
               </div>
             );
           })}
+          <Link to={`/DisclosuresPage/${"calendar"}`}>MORE</Link>
         </div>
 
         {/* <Modal id={"calenderModal"} name={t("OverviewPage.Calendar.calendar")}>
@@ -100,12 +100,12 @@ const Calendar = () => {
                 <div key={idx}>
                   <div className="modal-text">
                     <p>{t("OverviewPage.Calendar.Market")}</p>
-                    <p>{item?.[`marketName${changeLanguage()}`]}</p>
+                    <p>{item?.[`marketNameEn`]}</p>
                   </div>
 
                   <div className="modal-text">
                     <p>{t("OverviewPage.Calendar.Company")}</p>
-                    <p>{item?.[`companyName${changeLanguage()}`]}</p>
+                    <p>{item?.[`companyNameEn`]}</p>
                   </div>
 
                   <div className="modal-text">
@@ -115,7 +115,7 @@ const Calendar = () => {
 
                   <div className="modal-text">
                     <p>{t("OverviewPage.Calendar.CalendarType")}</p>
-                    <p>{item?.[`typeName${changeLanguage()}`]}</p>
+                    <p>{item?.[`typeNameEn`]}</p>
                   </div>
 
                   <div className="modal-text">
@@ -131,7 +131,7 @@ const Calendar = () => {
                   <div className="modal-details">
                     <p className="details-text">{t("Details.details")}</p>
                     <p className="details-data">
-                      {item?.[`description${changeLanguage()}`]?.replace(
+                      {item?.[`descriptionEn`]?.replace(
                         /(<([^>]+)>)/gi,
                         ""
                       )}
@@ -143,7 +143,7 @@ const Calendar = () => {
           </>
         </Modal> */}
       </div>
-    </>
+    </div>
   );
 };
 
